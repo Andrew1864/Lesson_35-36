@@ -197,6 +197,15 @@
   padding: 30px;
   flex: 1 1 auto;
 }
+.flex-price {
+  display: flex;  
+  align-items: baseline;
+}
+.flex-price p {
+  margin-left: 10px;
+  font-size: 16px;
+  font-style: italic;
+}
 @media screen and (max-width: 768px) {
   .details-flex {
     flex-direction: column;

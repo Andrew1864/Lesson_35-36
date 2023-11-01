@@ -108,13 +108,13 @@ function displayTasksDetails() {
           <div class="swiper-wrapper">
             <!-- Slides -->
             ${cardInfo?.galleryImages
-              .map(
-                (image) => `
+      .map(
+        (image) => `
               <div class="swiper-slide">
                 <img src="${image}" alt="${cardInfo?.name}"></img>
               </div>`
-              )
-              .join('')}
+      )
+      .join('')}
           </div>
           <div class="card-info">
             <svg class="details-heart" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -133,11 +133,16 @@ function displayTasksDetails() {
         <div class="information-descrption">
           <h2 class="descrption-title">${cardInfo?.name}</h2>
           <h3 class="descrption-subtitle">${cardInfo?.description}</h3>
-
-          <h3 class="descrption-subtitle">Price:</h3>
-          <p>${cardInfo?.price}</p>
-          <h3 class="descrption-subtitle">Category:</h3>
-          <p>${cardInfo?.category}</p>
+          <div>
+           <div class="flex-price">
+              <h3 class="descrption-subtitle">Price:</h3>
+              <p>${cardInfo?.price}</p>
+            </div>
+            <div class="flex-price">  
+              <h3 class="descrption-subtitle">Category:</h3>
+               <p>${cardInfo?.category}</p>
+              </div>
+          </div>
       </div>
     </div>
   `
